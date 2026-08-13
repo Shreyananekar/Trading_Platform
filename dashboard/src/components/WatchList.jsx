@@ -26,7 +26,7 @@ const WatchList = () => {
     const fetchLivePrices = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/api/market/watchlist"
+          "https://zerodha-stxd.onrender.com/api/market/watchlist"
         );
 
         const updatedStocks = response.data.map((stock) => ({

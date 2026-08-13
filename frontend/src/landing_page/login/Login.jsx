@@ -14,7 +14,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/api/auth/login",
+        "https://zerodha-stxd.onrender.com/api/auth/login",
         {
           email,
           password,

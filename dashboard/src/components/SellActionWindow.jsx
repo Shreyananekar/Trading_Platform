@@ -22,7 +22,7 @@ const SellActionWindow = ({ uid }) => {
 
     try {
       await axios.post(
-        "http://localhost:3002/newOrder",
+        "https://zerodha-stxd.onrender.com/newOrder",
         newOrder
       );
 

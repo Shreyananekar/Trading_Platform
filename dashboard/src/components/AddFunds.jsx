@@ -15,7 +15,7 @@ const AddFunds = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/funds/add",
+        "https://zerodha-stxd.onrender.com/funds/add",
         {
           amount: Number(amount),
         }

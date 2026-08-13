@@ -10,7 +10,7 @@ const Holdings = () => {
     const fetchHoldings = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/allHoldings"
+          "https://zerodha-stxd.onrender.com/allHoldings"
         );
 
         console.log("Holdings:", response.data);

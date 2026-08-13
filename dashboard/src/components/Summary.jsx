@@ -26,7 +26,7 @@ const Summary = () => {
     const fetchHoldings = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/allHoldings"
+          "https://zerodha-stxd.onrender.com/allHoldings"
         );
 
         setHoldings(response.data);
@@ -46,7 +46,7 @@ const Summary = () => {
     const fetchFunds = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/funds"
+          "https://zerodha-stxd.onrender.com/funds"
         );
 
         setFunds(response.data);

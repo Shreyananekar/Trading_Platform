@@ -16,7 +16,7 @@ const Funds = () => {
 
   const fetchFunds = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/funds");
+      const response = await axios.get("https://zerodha-stxd.onrender.com/funds");
 
       setFunds(response.data);
     } catch (error) {

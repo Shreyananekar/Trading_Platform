@@ -8,7 +8,7 @@ const Positions = () => {
     const fetchPositions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/allPositions"
+          "https://zerodha-stxd.onrender.com/allPositions"
         );
 
         console.log("Positions:", response.data);

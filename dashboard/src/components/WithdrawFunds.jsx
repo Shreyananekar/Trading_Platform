@@ -15,7 +15,7 @@ const WithdrawFunds = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/funds/withdraw",
+        "https://zerodha-stxd.onrender.com/funds/withdraw",
         {
           amount: Number(amount),
         }

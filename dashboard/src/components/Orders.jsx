@@ -9,7 +9,7 @@ const Orders = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3002/orders"
+          "https://zerodha-stxd.onrender.com/orders"
         );
 
         console.log("Orders received:", response.data);

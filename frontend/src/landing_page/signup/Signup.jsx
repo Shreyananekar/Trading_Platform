@@ -12,7 +12,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3002/api/auth/register", {
+      await axios.post("https://zerodha-stxd.onrender.com/api/auth/register", {
         name,
         email,
         password,

@@ -23,7 +23,7 @@ const BuyActionWindow = ({ uid }) => {
     try {
       // Send order to local backend
       await axios.post(
-        "http://localhost:3002/newOrder",
+        "https://zerodha-stxd.onrender.com/newOrder",
         newOrder
       );
 
