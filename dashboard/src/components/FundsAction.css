@@ -1,0 +1,68 @@
+.fund-action-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 70px;
+}
+
+.fund-action-card {
+  width: 400px;
+  padding: 35px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fund-action-card h2 {
+  margin-bottom: 10px;
+  color: #424242;
+}
+
+.fund-action-card p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.fund-action-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fund-action-card label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #424242;
+}
+
+.fund-action-card input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.fund-action-card input:focus {
+  outline: none;
+  border-color: #387ed1;
+}
+
+.fund-submit {
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  background: #387ed1;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.fund-submit:hover {
+  background: #2f6db5;
+}
+
+.commodity-card {
+  text-align: center;
+}

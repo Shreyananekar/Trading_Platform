@@ -1,0 +1,121 @@
+.funds {
+  padding: 30px 40px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.funds p {
+  margin: 0;
+  margin-right: auto;
+  font-size: 16px;
+  color: #424242;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #387ed1;
+  color: white;
+}
+
+.btn-blue {
+  background-color: #387ed1;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Main row */
+.row {
+  display: flex;
+  padding: 40px;
+  gap: 50px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* Equity heading */
+.col > span p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #424242;
+}
+
+/* Table */
+.table {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.data p {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.data .imp {
+  font-size: 16px;
+  font-weight: 500;
+  color: #424242;
+}
+
+.data .colored {
+  color: #387ed1;
+}
+
+/* Commodity section */
+.commodity {
+  border: 1px solid #eee;
+  padding: 35px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.commodity p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.commodity .btn {
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .funds {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .funds p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}

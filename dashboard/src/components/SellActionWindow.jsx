@@ -5,46 +5,45 @@ import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import "./BuyActionWindow.css";
 
-const BuyActionWindow = ({ uid }) => {
+const SellActionWindow = ({ uid }) => {
   const ctx = useContext(GeneralContext);
 
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleBuyClick = async () => {
+  const handleSellClick = async () => {
     const newOrder = {
       id: Date.now(),
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
-      mode: "BUY",
+      mode: "SELL",
     };
 
     try {
-      // Send order to local backend
       await axios.post(
         "http://localhost:3002/newOrder",
         newOrder
       );
 
-      // Add order to context so Orders.jsx updates immediately
       ctx.addOrder(newOrder);
 
-      // Close the buy window
-      ctx.closeBuyWindow();
+      ctx.closeSellWindow();
     } catch (err) {
-      console.error("Error placing order:", err);
-      alert("Failed to place order. Try again.");
+      console.error("Error placing sell order:", err);
+      alert("Failed to place sell order. Try again.");
     }
   };
 
   const handleCancelClick = () => {
-    ctx.closeBuyWindow();
+    ctx.closeSellWindow();
   };
 
   return (
     <div className="container" id="buy-window" draggable="true">
+
       <div className="regular-order">
+
         <div className="inputs">
 
           <fieldset>
@@ -75,17 +74,20 @@ const BuyActionWindow = ({ uid }) => {
           </fieldset>
 
         </div>
+
       </div>
 
       <div className="buttons">
+
         <span>Margin required ₹140.65</span>
 
         <div>
+
           <Link
             className="btn btn-blue"
-            onClick={handleBuyClick}
+            onClick={handleSellClick}
           >
-            Buy
+            Sell
           </Link>
 
           <Link
@@ -94,10 +96,13 @@ const BuyActionWindow = ({ uid }) => {
           >
             Cancel
           </Link>
+
         </div>
+
       </div>
+
     </div>
   );
 };
 
-export default BuyActionWindow;
+export default SellActionWindow;

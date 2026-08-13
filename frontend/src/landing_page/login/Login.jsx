@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./Login.css"; // ✅ MUST be here
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,33 +13,53 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://zerodha-clone-agsc.onrender.com/api/auth/login",
-        { email, password }
+      const response = await axios.post(
+        "http://localhost:3002/api/auth/login",
+        {
+          email,
+          password,
+        }
       );
 
-      const { token } = response.data;
+      // Get token and user from backend
+      const { token, user } = response.data;
+
+      // Save JWT token
       localStorage.setItem("token", token);
 
-      // redirect to dashboard app
-      window.location.href = "https://zerodha-clone-2-w3vk.onrender.com";
+      // Save user information
+      localStorage.setItem("user", JSON.stringify(user));
+
+      // Redirect to dashboard
+      window.location.href = "http://localhost:5173";
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(
+        err.response?.data?.message || "Login failed"
+      );
     }
   };
 
   return (
     <div className="login-page">
       <div className="login-card">
+
         <h2>Login to Zerodha</h2>
 
-        {error && <p className="login-error">{error}</p>}
+        {error && (
+          <p className="login-error">
+            {error}
+          </p>
+        )}
 
         <form onSubmit={handleLogin}>
+
           <input
             type="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
             required
           />
 
@@ -47,16 +67,25 @@ const Login = () => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit">
+            Login
+          </button>
+
         </form>
 
         <p className="signup-text">
-          Don’t have an account? <Link to="/signup">Sign up</Link>
+          Don’t have an account?{" "}
+          <Link to="/signup">
+            Sign up
+          </Link>
         </p>
+
       </div>
     </div>
   );

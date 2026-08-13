@@ -1,0 +1,75 @@
+.apps-page {
+  padding: 40px;
+}
+
+.apps-page h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #424242;
+}
+
+.apps-subtitle {
+  color: #777;
+  margin-bottom: 35px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.app-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  padding: 30px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.app-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.app-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.app-card h3 {
+  color: #424242;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.app-card p {
+  color: #777;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+.app-card button {
+  margin-top: 15px;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 3px;
+  background: #387ed1;
+  color: white;
+  cursor: pointer;
+}
+
+.app-card button:hover {
+  background: #2f6db5;
+}
+
+@media (max-width: 768px) {
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apps-page {
+    padding: 20px;
+  }
+}
