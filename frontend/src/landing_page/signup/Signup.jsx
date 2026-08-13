@@ -19,7 +19,7 @@ const Signup = () => {
       });
 
       alert("User registered successfully");
-      window.location.href = "http://localhost:5173";
+      window.location.href = "https://trading-platform-ihe1.onrender.com";
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed");
     }

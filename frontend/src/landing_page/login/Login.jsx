@@ -31,7 +31,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(user));
 
       // Redirect to dashboard
-      window.location.href = "http://localhost:5173";
+      window.location.href = "https://trading-platform-ihe1.onrender.com";
     } catch (err) {
       setError(
         err.response?.data?.message || "Login failed"
